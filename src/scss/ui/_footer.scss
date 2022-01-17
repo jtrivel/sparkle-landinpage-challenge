@@ -1,0 +1,94 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+  padding: 5rem 0;
+  background-color: v.$lightblack;
+  color: v.$white;
+  font-size: 1.4rem;
+
+  &__grid {
+
+    @include m.grid(1,4rem);
+
+ 
+    @include m.tablet { 
+      @include m.grid(2,4rem);
+     }
+
+     @include m.desktop {
+      @include m.grid(4,2rem);
+      justify-items: center;
+    }
+  }
+  
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 40rem;
+    @include m.tablet { 
+      grid-row: 2/3;
+    }
+    @include m.desktop { 
+      grid-row: unset;
+     }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__logo {
+    max-width: 5rem;
+  }
+
+  &__span {
+    color: v.$secondaryColor;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__link {
+    
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 40rem;
+  }
+
+  &__btn {
+    padding: 1rem 2.5rem;
+    border-radius: 68rem;
+    background-color: v.$secondaryColor;
+    color: v.$lightblack;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size:  1.8rem;
+  }
+
+}

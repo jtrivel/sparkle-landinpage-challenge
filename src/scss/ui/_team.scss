@@ -1,0 +1,74 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.team {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @include m.desktopXL { 
+    padding: 15rem 0;
+   }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+  }
+
+  &__text {
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    word-spacing: 1.2px;
+    max-width: 90rem;
+  }
+
+  &__img {
+    max-width: 15rem
+  }
+
+  &__grid {
+    @include m.grid(1,4rem); 
+    justify-items: center;
+    @include m.tablet { 
+      @include m.grid(2,2rem);
+     }
+     @include m.desktop { 
+      @include m.grid(4,2rem);
+     }
+  }
+
+  &__card{
+    max-width: 35rem;
+  }
+
+  
+  &__user {
+  height: 30rem;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  }
+
+  &__content {
+    background-color: #d1bc05;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+
+  &__review {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+  padding: 5rem 0;
+  min-height: 50vh;
+  background-color: v.$black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__hero {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__heading {
+    color: v.$white;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  &__subheading {
+    color: v.$white;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+  }
+
+  &__btn {
+    background-color: v.$secondaryColor;
+    padding: 1rem 3rem;
+    color: v.$black;
+    text-align: center;
+    font-weight: 300;
+    align-self: center;
+  }
+}

@@ -1,0 +1,46 @@
+@use 'variables' as v ;
+@use 'mixins' as m ;
+
+html {
+  font-size:  62.5%;
+}
+
+body {
+  background-color: v.$white;
+  font-size: 1.6rem;
+  font-family: v.$primaryFont;
+  letter-spacing: 1.5px;
+  word-spacing: 2px ;
+  position: relative;
+}
+
+.container {
+  max-width: 140rem;
+  width: 95%;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: v.$white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+h2 {
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 1.6rem;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+

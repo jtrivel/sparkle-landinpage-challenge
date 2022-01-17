@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.cta {
+  min-height: 30vh;
+  background-color: v.$black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__btn {
+    border: 1px solid v.$secondaryColor;
+    color: v.$secondaryColor;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    @include m.tablet { 
+      font-size: 2rem;
+      padding: 3rem 8rem;
+     }
+  }
+}
